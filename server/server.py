@@ -129,7 +129,7 @@ class Server:
 
             if opcode == OPCODE_DATA:
                 logging.info("[*] data report from the edge")
-                rbuf = client.recv(5)
+                rbuf = client.recv(8)
                 logging.debug("[*] received buf: {}".format(rbuf))
                 self.parse_data(rbuf, True)
             else:

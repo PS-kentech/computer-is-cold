@@ -96,7 +96,7 @@ int NetworkManager::sendData(uint8_t *data, int dlen)
   assert(offset == tbs);
 
   // Example) edge -> server
-  tbs = 8; offset = 0;
+  tbs = dlen; offset = 0;
   memcpy(n, data,8); //save 8 length data to n
   while (offset < tbs)
   {
